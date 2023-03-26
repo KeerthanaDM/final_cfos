@@ -127,7 +127,7 @@
         <!-- owl stylesheets --> 
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   </head>
        <body>
          <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -150,13 +150,13 @@
    <link rel="icon" href="../" />
    <img src="{% static 'images/logo.png' %}" width="120px" height="50px">
 
-   <a class="navbar-brand" href="/"><h2 style="color:black;font-family:sans-serif;font-weight:bolder;"><b>Mingos</b></h2></a>
+   <a class="navbar-brand" style="color:black;font-family:sans-serif;font-weight:bold;padding-bottom: 3px;" href="/">Mingos</a>
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
      <span class="navbar-toggler-icon"></span>
    </button>
-   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+   <div class="collapse navbar-collapse"  id="navbarSupportedContent"    style="margin-left: 50%;" >
      <ul class="navbar-nav"  style="z-index:0; margin-left:auto!important;margin-right:30px; ">
-       <li class="nav-item active">
+       <li class="nav-item active" >
          <a class="nav-link" id="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
        </li>
        {% if request.session.CustId is None and request.session.AdminId is not None %}
@@ -221,15 +221,150 @@
   
         </div>
  </nav>
+ <div id="starting_ban" style="height: 50em;width:full;">
+   <h1 style="margin-left: 4em;margin-top:6em;font-weight:bold;font-family:cursive;color: #FFF;z-index: 99;">🍕⛽M I N G O S⛽🍕</h1><br/>
+   <h2 style="margin-left: 7em;font-style: italic;font-family:cursive;color: #FFF;z-index: 99;">"Fuel your day with our  <br><br>delicious bites!"🍟🍿</h2>
+ </div>
+ <h1 style="margin-left: auto;margin-right: auto;">MINGOS MENU</h1>
+
+ <div>
+   <style>
+      .wrap {
+      overflow: hidden;
+      margin: 10px;
+    }
+    .box {
+      float: left;
+      position: relative;
+      width: 20%;
+      padding-bottom: 20%;
+    }
+    .boxInner {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 10px;
+      bottom: 10px;
+      overflow: hidden;
+    }
+    .boxInner img {
+      width: 100%;
+    }
+    .boxInner .titleBox {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-bottom: -50px;
+      background: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      color: #FFF;
+      padding: 10px;
+      text-align: center;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+    section.no-touch .boxInner:hover .titleBox, section.touch .boxInner.touchFocus .titleBox {
+      margin-bottom: 0;
+    }
+    @media only screen and (max-width : 480px) {
+      /* Smartphone view: 1 tile */
+      .box {
+        width: 100%;
+        padding-bottom: 100%;
+      }
+    }
+    @media only screen and (max-width : 650px) and (min-width : 481px) {
+      /* Tablet view: 2 tiles */
+      .box {
+        width: 50%;
+        padding-bottom: 50%;
+      }
+    }
+    @media only screen and (max-width : 1050px) and (min-width : 651px) {
+      /* Small desktop / ipad view: 3 tiles */
+      .box {
+        width: 33.3%;
+        padding-bottom: 33.3%;
+      }
+    }
+    @media only screen and (max-width : 1290px) and (min-width : 1051px) {
+      /* Medium desktop: 4 tiles */
+      .box {
+        width: 25%;
+        padding-bottom: 25%;
+      }
+    }
+
+   </style>
+   <section class="no-touch" >
+
+      <div class="wrap" style="margin-top:15px;margin-left: 15px;">
+        
+        <div class="box">
+          <div class="boxInner">
+            <img style="height: 20em;width: 15em;margin-left: auto;margin-right: auto;"src="{% static '/images/a.jpeg' %}">
+          </div>
+        </div>
+        
+        <div class="box">
+          <div class="boxInner">
+            <img style="height: 20em;width: 15em;margin-left: auto;margin-right: auto;"src="{% static '/images/b.jpeg' %}">
+          </div>
+        </div>
+        <div class="box">
+          <div class="boxInner">
+            <img style="height: 20em;width: 15em;margin-left: auto;margin-right: auto;"src="{% static '/images/c.jpeg' %}">
+          </div>
+        </div>
+        <div class="box">
+          <div class="boxInner">
+            <img style="height: 20em;width: 15em;margin-left: auto;margin-right: auto;"src="{% static '/images/d.jpeg' %}">
+          </div>
+        </div>
+        <div class="box">
+          <div class="boxInner">
+            <img style="height: 20em;width: 15em;margin-left: auto;margin-right: auto;"src="{% static '/images/e.jpeg' %}">
+          </div>
+        </div>
+        <div class="box">
+          <div class="boxInner">
+            <img style="height: 20em;width: 15em;margin-left: auto;margin-right: auto;"src="{% static '/images/f.jpeg' %}">
+          </div>
+        </div>
+        <div class="box">
+          <div class="boxInner">
+            <img style="height: 20em;width: 15em;margin-left: auto;margin-right: auto;"src="{% static '/images/g.jpeg' %}">
+          </div>
+        </div>
+        <div class="box">
+          <div class="boxInner">
+            <img style="height: 20em;width: 15em;margin-left: auto;margin-right: auto;"src="{% static '/images/h.jpeg' %}">
+          </div>
+        </div>
+        <div class="box">
+          <div class="boxInner">
+            <img style="height: 20em;width: 15em;margin-left: auto;margin-right: auto;"src="{% static '/images/i.jpeg' %}">
+          </div>
+        </div>
+        <div class="box">
+          <div class="boxInner">
+            <img style="height: 20em;width: 15em;margin-left: auto;margin-right: auto;"src="{% static '/images/j.jpeg' %}">
+          </div>
+        </div>
+        
+      </div>
+      
+    </section>
+ </div>
 
  <main>
  </br>
 
- <div id="starting_ban"> 
- </br></br>
-   
-      
-     </div>
+ 
+
      <div class="about">
       <div>
          <style>
@@ -304,7 +439,7 @@
     <div id="container">
     <div id="cont">
     <div class="footer_center">
-          <h3 style="color:white;">Mingos</h3>
+          <h3 style="color:white; ">Mingos</h3>
           <p style="color:white;">Made by Santosh | Nisarga | Keerthana🍔🍟🍕</p>
     </div>
     </div>
